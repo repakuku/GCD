@@ -28,7 +28,15 @@ final  class SecondViewController: UIViewController {
 		super.viewDidLoad()
 		activityIndicator.hidesWhenStopped = true
 		getImage()
-		loginAlert()
+		delay(3) {
+			self.loginAlert()
+		}
+	}
+
+	private func delay(_ delay: Int, closure: @escaping () -> Void) {
+		DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(delay)) {
+			closure()
+		}
 	}
 
 	private func loginAlert() {
