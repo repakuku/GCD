@@ -28,6 +28,30 @@ final  class SecondViewController: UIViewController {
 		super.viewDidLoad()
 		activityIndicator.hidesWhenStopped = true
 		getImage()
+		loginAlert()
+	}
+
+	private func loginAlert() {
+		let alertController = UIAlertController(
+			title: "Is register?",
+			message: "Enter your login and password",
+			preferredStyle: .alert
+		)
+		let okAction = UIAlertAction(title: "OK", style: .default)
+		let cancelAction = UIAlertAction(title: "Cancel", style: .default)
+
+		alertController.addAction(okAction)
+		alertController.addAction(cancelAction)
+
+		alertController.addTextField { usernameTF in
+			usernameTF.placeholder = "Enter login"
+		}
+		alertController.addTextField { userPasswordTF in
+			userPasswordTF.placeholder = "Enter password"
+			userPasswordTF.isSecureTextEntry = true
+		}
+
+		present(alertController, animated: true)
 	}
 
 	private func getImage() {
