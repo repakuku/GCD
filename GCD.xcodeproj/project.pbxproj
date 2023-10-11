@@ -63,8 +63,8 @@
 				079CDFFE2AD71BE100070EF7 /* ViewController.swift */,
 				079CE00E2AD720BB00070EF7 /* SecondViewController.swift */,
 				079CE0002AD71BE100070EF7 /* Main.storyboard */,
-				079CE0032AD71BE400070EF7 /* Assets.xcassets */,
 				079CE0052AD71BE400070EF7 /* LaunchScreen.storyboard */,
+				079CE0032AD71BE400070EF7 /* Assets.xcassets */,
 				079CE0082AD71BE400070EF7 /* Info.plist */,
 			);
 			path = GCD;
