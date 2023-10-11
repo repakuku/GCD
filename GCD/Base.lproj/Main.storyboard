@@ -53,17 +53,23 @@
                                     <constraint firstAttribute="height" constant="379" id="Q2F-Na-nXI"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ifw-A8-L2D">
+                                <rect key="frame" x="186" y="282" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="60l-h6-4pZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Ewk-qw-A5y" firstAttribute="width" secondItem="60l-h6-4pZ" secondAttribute="width" id="7dR-6L-n9b"/>
                             <constraint firstItem="Ewk-qw-A5y" firstAttribute="top" secondItem="60l-h6-4pZ" secondAttribute="top" id="Wmi-XZ-Egz"/>
+                            <constraint firstItem="ifw-A8-L2D" firstAttribute="centerY" secondItem="Ewk-qw-A5y" secondAttribute="centerY" id="kRC-WS-caJ"/>
+                            <constraint firstItem="ifw-A8-L2D" firstAttribute="centerX" secondItem="Ewk-qw-A5y" secondAttribute="centerX" id="mHc-lT-5Ss"/>
                             <constraint firstItem="Ewk-qw-A5y" firstAttribute="centerX" secondItem="60l-h6-4pZ" secondAttribute="centerX" id="uEQ-sP-Yek"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="heU-0O-Ia2"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="ifw-A8-L2D" id="6gJ-K5-1i9"/>
                         <outlet property="imageView" destination="Ewk-qw-A5y" id="2p3-iN-of8"/>
                     </connections>
                 </viewController>
