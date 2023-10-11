@@ -13,6 +13,7 @@
 		079CE0022AD71BE100070EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079CE0002AD71BE100070EF7 /* Main.storyboard */; };
 		079CE0042AD71BE400070EF7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 079CE0032AD71BE400070EF7 /* Assets.xcassets */; };
 		079CE0072AD71BE400070EF7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 079CE0052AD71BE400070EF7 /* LaunchScreen.storyboard */; };
+		079CE00F2AD720BB00070EF7 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CE00E2AD720BB00070EF7 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		079CE0032AD71BE400070EF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		079CE0062AD71BE400070EF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		079CE0082AD71BE400070EF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		079CE00E2AD720BB00070EF7 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				079CDFFA2AD71BE100070EF7 /* AppDelegate.swift */,
 				079CDFFC2AD71BE100070EF7 /* SceneDelegate.swift */,
 				079CDFFE2AD71BE100070EF7 /* ViewController.swift */,
+				079CE00E2AD720BB00070EF7 /* SecondViewController.swift */,
 				079CE0002AD71BE100070EF7 /* Main.storyboard */,
 				079CE0032AD71BE400070EF7 /* Assets.xcassets */,
 				079CE0052AD71BE400070EF7 /* LaunchScreen.storyboard */,
@@ -74,6 +77,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 079CE00B2AD71BE400070EF7 /* Build configuration list for PBXNativeTarget "GCD" */;
 			buildPhases = (
+				079CE0102AD7217F00070EF7 /* Run SwiftLint */,
 				079CDFF32AD71BE100070EF7 /* Sources */,
 				079CDFF42AD71BE100070EF7 /* Frameworks */,
 				079CDFF52AD71BE100070EF7 /* Resources */,
@@ -133,11 +137,34 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		079CE0102AD7217F00070EF7 /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint >/dev/null; then \n\tswiftlint \nelse \n\techo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\" \n\texit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		079CDFF32AD71BE100070EF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				079CE00F2AD720BB00070EF7 /* SecondViewController.swift in Sources */,
 				079CDFFF2AD71BE100070EF7 /* ViewController.swift in Sources */,
 				079CDFFB2AD71BE100070EF7 /* AppDelegate.swift in Sources */,
 				079CDFFD2AD71BE100070EF7 /* SceneDelegate.swift in Sources */,
@@ -293,6 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6PNGGFV6BC;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GCD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -321,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6PNGGFV6BC;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GCD/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
